@@ -1,0 +1,56 @@
+.movie_poster {
+  display: block;
+  position: relative;
+  height: 452px;
+  width: 295px;
+  img {
+    aspect-ratio: 2 / 3;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &.embla__slide {
+    min-width: 295px;
+  }
+
+  .library {
+    &__item_gradient {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 10px;
+      z-index: 2;
+      background: linear-gradient(
+                      156.82deg,
+                      rgba(0, 0, 0, 0.6) 4.58%,
+                      rgba(0, 0, 0, 0) 69.61%
+      ),
+      linear-gradient(
+                      24.5deg,
+                      rgba(0, 0, 0, 0.2) 4.71%,
+                      rgba(0, 0, 0, 0) 71.49%
+      );
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .movie_poster {
+    &.embla__slide {
+      min-height: 279px;
+      min-width: 183px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

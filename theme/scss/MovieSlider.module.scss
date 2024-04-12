@@ -1,0 +1,166 @@
+.movies_grid {
+  padding: 0 6rem;
+  position: relative;
+  margin-bottom: 5rem;
+
+  &.top_0 {
+    top: 0;
+  }
+
+  &.top {
+    top: -30vh;
+  }
+
+  .latest_movies {
+    width: 100vw;
+    padding: 0 3%;
+
+    .container{
+      position: inherit;
+
+      .section_header{
+        padding: 2rem 0;
+
+        .section_heading{
+          color: #FFFFFF;
+          font-size: 1.4vw;
+          line-height: 1.25vw;
+          text-align: left;
+        }
+      }
+    }
+
+    [class*="-viewport"] {
+      [class*="-camera"] {
+        column-gap: 20px;
+      }
+    }
+  }
+}
+
+.movie_slide {
+  display: block;
+  position: relative;
+  height: 452px;
+  width: 295px;
+  img {
+    aspect-ratio: 2 / 3;
+    border-radius: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &.panel {
+    min-width: 295px;
+  }
+
+  //&.flicking-panel{
+  //  align-items: flex-end;
+  //  box-sizing: border-box;
+  //  display: flex;
+  //  justify-content: flex-start;
+  //  position: relative;
+  //}
+
+  .movie__poster_gradient {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+    background: linear-gradient(
+                    156.82deg,
+                    rgba(0, 0, 0, 0.6) 4.58%,
+                    rgba(0, 0, 0, 0) 69.61%
+    ),
+    linear-gradient(
+                    24.5deg,
+                    rgba(0, 0, 0, 0.2) 4.71%,
+                    rgba(0, 0, 0, 0) 71.49%
+    );
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .latest_movies {
+    padding: 0 60px;
+
+    .container {
+
+    }
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px){}
+
+@media (min-width: 1025px) and (max-width: 1280px){}
+@media (min-width: 768px) and (max-width: 1024px){
+  .movies_grid {
+
+    &.top {
+      top: -18vh;
+    }
+
+    .latest_movies {
+      .container{
+        .section_header{
+          .section_heading{
+            font-size: 2.6vw;
+            font-weight: 600;
+            font-family: Poppins, sans-serif;
+          }
+        }
+
+        .slider_container {
+          .movie_slide {
+          }
+        }
+      }
+    }
+  }
+
+  .movie_poster {
+    &.panel {
+      min-height: 279px;
+      min-width: 183px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  .movies_grid {
+    padding: 0;
+    &.top {
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .movies_grid {
+    padding: 0;
+    .latest_movies{
+      padding: 0 1.3rem;
+      .container{
+        .section_header{
+          .section_heading {
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+    &.top {
+      top: 0;
+    }
+  }
+}

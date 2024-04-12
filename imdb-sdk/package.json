@@ -1,0 +1,24 @@
+{
+  "name": "imdb-sdk",
+  "version": "1.0.0",
+  "description": "SDK that fetches movies from https://search.imdbot.workers.dev/ endpoints",
+  "main": "dist/imdb.js",
+  "types": "dist/types.ts",
+  "scripts": {
+    "prepublish": "rimraf dist && tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "imdb-sdk",
+    "imdbot"
+  ],
+  "author": "kevinnmwangi@gmail.com",
+  "license": "GNU",
+  "dependencies": {
+    "axios": "^1.6.8"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^4.5.4"
+  }
+}
